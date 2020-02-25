@@ -1,23 +1,34 @@
 
 import React from "react";
-import { getPokemon } from "./../utils";
-import { getMove } from "./../utils";
+import { getPokemon } from "../utils/getPokemon";
+import { getMove } from "../utils/getMove";
 
 function Battle({ pokemon1,pokemon2,move }) {
-  const [pokemon1, setPokemon1] = React.useState(null);
-  const [pokemon2, setPokemon2] = React.useState(null);
-  const [move, setMove] = React.useState(null);
-
+  var p1=100,p2=100;
+  var turn = true;
   React.useEffect(() => {
-    getPokemon(name).then(data => {
-      setData(data);
-    });
-  }, [name]);
-  if (!data) return <div>Loading...</div>;
+    if(move==null) return;
+    if(turn){
+        p2-=move.power;
+    }
+    else{
+        p1-=move.power;
+    }
+    turn = !turn;
+    return;
+  }, [move]);
+ 
   return (
     <div>
-      <h2>{data.name}</h2>
-    </div>
+    <div id="lifeBar1"> 
+            <div id="firstPokemonLife">Life of pokemon1: {p1}</div> 
+      </div> 
+      <div id="lifeBar2"> 
+            <div id="secondPokemonLife">Life of pokemon2: {p2}</div> 
+      </div> 
+
+      </div>
+
   );
 }
 
@@ -32,5 +43,5 @@ export default Battle;
 
 
 
-var width = (currentquestion+1)/maxquestions * 100;  
-element.style.width = width + '%';
+// var width = (currentquestion+1)/maxquestions * 100;  
+// element.style.width = width + '%';
