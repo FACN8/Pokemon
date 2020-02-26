@@ -1,19 +1,18 @@
-import React from 'react';
-import { getPokemon } from '../utils/getPokemon';
-import { getMove } from '../utils/getMove';
+import React from "react";
+import { getPokemon } from "../utils/getPokemon";
+import { getMove } from "../utils/getMove";
 
-function Battle({ pokemon1, pokemon2, move }) {
-  var p1 = 100,
-    p2 = 100;
-  var turn = true;
+function Battle({p1Life, setP1Life, p2Life, setP2Life, move, turn, setTurn}) {
   React.useEffect(() => {
-    if (move == null) return;
-    if (turn) {
-      p2 -= move.power;
-    } else {
-      p1 -= move.power;
+    if(move===null) return;
+    if(turn===1){
+        setTurn(2)
+        setP2Life(p2Life-move.power)
     }
-    turn = !turn;
+    else{
+        setTurn(1)
+        setP1Life(p1Life-move.power)
+    }
     return;
   }, [move]);
 
@@ -21,10 +20,10 @@ function Battle({ pokemon1, pokemon2, move }) {
     <div className="stats">
       <div className="lifeBar" id="lifeBar1">
         <img className="lifeHeart" src="./life.png"></img>
-        <h3 id="firstPokemonLife">Pokemon - 1: {p1}%</h3>
+        <h3 id="firstPokemonLife">Pokemon - 1: {p1Life}%</h3>
       </div>
       <div className="lifeBar" id="lifeBar2">
-        <h3 id="secondPokemonLife">Pokemon - 2: {p2}%</h3>
+        <h3 id="secondPokemonLife">Pokemon - 2: {p2Life}%</h3>
         <img className="lifeHeart" src="./life.png"></img>
       </div>
     </div>
