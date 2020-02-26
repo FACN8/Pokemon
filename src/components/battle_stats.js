@@ -3,28 +3,26 @@ import React from "react";
 import { getPokemon } from "../utils/getPokemon";
 import { getMove } from "../utils/getMove";
 
-function Battle({ pokemon1,pokemon2,move }) {
-  var p1=100,p2=100;
-  var turn = true;
+function Battle({p1Life, setP1Life, p2Life, setP2Life, move, turn, setTurn}) {
   React.useEffect(() => {
-    if(move==null) return;
-    if(turn){
-        p2-=move.power;
+    if(move===null) return;
+    if(turn===1){
+        setTurn(2)
+        setP2Life(p2Life-move.power)
     }
     else{
-        p1-=move.power;
+        setTurn(1)
+        setP1Life(p1Life-move.power)
     }
-    turn = !turn;
     return;
   }, [move]);
- 
   return (
     <div>
     <div id="lifeBar1"> 
-            <div id="firstPokemonLife">Life of pokemon1: {p1}</div> 
+            <div id="firstPokemonLife">Life of pokemon1: {p1Life}</div> 
       </div> 
       <div id="lifeBar2"> 
-            <div id="secondPokemonLife">Life of pokemon2: {p2}</div> 
+            <div id="secondPokemonLife">Life of pokemon2: {p2Life}</div> 
       </div> 
 
       </div>
