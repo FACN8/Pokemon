@@ -5,10 +5,13 @@ import RightPlayer from './components/right_player';
 
 function App() {
   return (
-    <section className="battle">
-      <LeftPlayer />
-      <RightPlayer />
-    </section>
+    <div>
+      <h1 id="temp">Hi</h1>
+      <section className="battle">
+        <LeftPlayer />
+        <RightPlayer />
+      </section>
+    </div>
   );
 }
 
