@@ -62,7 +62,7 @@ img {
   width: 3vw;
 }
 /*-----------------------------------------------------*/
-/* #lifeBar1 #lifeBar2{ 
+#lifeBar1 #lifeBar2{ 
   width: 50%; 
   background-color: rgb(230, 230, 230); 
   border-radius: 10px;
@@ -77,4 +77,4 @@ img {
   color: black;
   border-radius: 10px;
   border: solid rgb(0, 85, 0) 1px;
-}  */
+} 

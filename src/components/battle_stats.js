@@ -1,6 +1,5 @@
 import React from "react";
-import { getPokemon } from "../utils/getPokemon";
-import { getMove } from "../utils/getMove";
+
 
 function Battle({p1Life, setP1Life, p2Life, setP2Life, move, turn, setTurn}) {
   React.useEffect(() => {
