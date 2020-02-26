@@ -7,7 +7,7 @@ import { getPokemon } from "./utils/getPokemon";
 import { getMove } from "./utils/getMove";
 
 function App() {
-  const [pokemon1, setPokemon1] = React.useState(null);
+  const [pokemon1, setPokemon1] = React.useState({name: "ditto", life: 100});
   const [pokemon2, setPokemon2] = React.useState({name: "ditto", life: 100});
   const [p1Life, setP1Life] = React.useState(100)
   const [p2Life, setP2Life] = React.useState(100)
@@ -36,7 +36,6 @@ function App() {
 
       </header>
     </div>
-
   );
 }
 

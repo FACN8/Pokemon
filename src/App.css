@@ -6,9 +6,9 @@
 body {
   background-image: url('/background.png');
   background-repeat: no-repeat;
-  background-size: 80vw 100vh;
-  background-position: center top;
-  background-color: black;
+  background-size: 80vw 90vh;
+  background-position: center bottom;
+  background-color: rgb(60, 109, 54);
 }
 
 .battle {
@@ -16,7 +16,53 @@ body {
   justify-content: space-between;
 }
 
-#lifeBar1 #lifeBar2{ 
+.lifeHeart {
+  height: 6vh;
+  width: 3vw;
+}
+.lifeBar {
+  display: flex;
+  align-items: center;
+}
+
+.stats {
+  padding: 4px;
+  width: 80vw;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+img {
+  width: 100%;
+  height: 15vh;
+  border-radius: 50%;
+}
+.player {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  text-align: center;
+  color: white;
+  width: 10vw;
+  height: 90vh;
+  word-wrap: break-word;
+  border: red 2px solid;
+}
+
+.moves {
+  list-style: none;
+}
+
+.pokeball {
+  height: 6vh;
+  width: 3vw;
+}
+/*-----------------------------------------------------*/
+/* #lifeBar1 #lifeBar2{ 
   width: 50%; 
   background-color: rgb(230, 230, 230); 
   border-radius: 10px;
@@ -31,17 +77,4 @@ body {
   color: black;
   border-radius: 10px;
   border: solid rgb(0, 85, 0) 1px;
-} 
-img {
-  width: 100%;
-  height: 15vh;
-  border-radius: 50%;
-}
-.player {
-  padding: 15px;
-  color: red;
-  width: 10vw;
-  height: 100vh;
-  border: 3px solid red;
-}
-
+}  */

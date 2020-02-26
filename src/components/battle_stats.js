@@ -1,4 +1,3 @@
-
 import React from "react";
 import { getPokemon } from "../utils/getPokemon";
 import { getMove } from "../utils/getMove";
@@ -16,30 +15,22 @@ function Battle({p1Life, setP1Life, p2Life, setP2Life, move, turn, setTurn}) {
     }
     return;
   }, [move]);
+
   return (
-    <div>
-    <div id="lifeBar1"> 
-            <div id="firstPokemonLife">Life of pokemon1: {p1Life}</div> 
-      </div> 
-      <div id="lifeBar2"> 
-            <div id="secondPokemonLife">Life of pokemon2: {p2Life}</div> 
-      </div> 
-
+    <div className="stats">
+      <div className="lifeBar" id="lifeBar1">
+        <img className="lifeHeart" src="./life.png"></img>
+        <h3 id="firstPokemonLife">Pokemon - 1: {p1Life}%</h3>
       </div>
-
+      <div className="lifeBar" id="lifeBar2">
+        <h3 id="secondPokemonLife">Pokemon - 2: {p2Life}%</h3>
+        <img className="lifeHeart" src="./life.png"></img>
+      </div>
+    </div>
   );
 }
 
 export default Battle;
 
-
-
-
-
-
-
-
-
-
-// var width = (currentquestion+1)/maxquestions * 100;  
+// var width = (currentquestion+1)/maxquestions * 100;
 // element.style.width = width + '%';
