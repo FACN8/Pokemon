@@ -27,7 +27,7 @@ const LeftPlayer = ({ pokemon, setPokemon, setMove, turn }) => {
 
   return (
     <section className="player">
-      <h1>1st Player </h1>
+      <h1>2nd Player </h1>
       <div id="leftPlayer">
         <img src="https://assets.pokemon.com/assets/cms2/img/misc/countries/mt/country_detail_pokemon.png"></img>
         <h1>Mahmod</h1>
@@ -43,6 +43,8 @@ const LeftPlayer = ({ pokemon, setPokemon, setMove, turn }) => {
         </ul>
         <img className="pokeball" src="./pokeball.png"></img>
       </div>
+      <img className="characterTwo" src="https://assets.pokemon.com/assets/cms2/img/misc/countries/mt/country_detail_pokemon.png"></img>
+
     </section>
   );
 };

@@ -30,7 +30,6 @@ const RightPlayer = ({ pokemon, setPokemon, setMove, turn }) => {
       <h1>1st Player </h1>
       <div id="rightPlayer">
         <img src="https://assets.pokemon.com/assets/cms2/img/misc/countries/mt/country_detail_pokemon.png"></img>
-        {console.log(moves[0])}
         <h1>Aysam</h1>
         <ul className="moves">
           <li>1<button onClick={()=>{if(turn==2) setMove({power: moves[0].power})}}>{moves[0].name}</button>
@@ -44,7 +43,10 @@ const RightPlayer = ({ pokemon, setPokemon, setMove, turn }) => {
         </ul>
         <img className="pokeball" src="./pokeball.png"></img>
       </div>
+      <img className="characterOne" src="https://assets.pokemon.com/assets/cms2/img/misc/countries/mt/country_detail_pokemon.png"></img>
+
     </section>
+    
   );
 };
 
