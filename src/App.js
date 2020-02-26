@@ -9,18 +9,15 @@ function App() {
   const [pokemon2, setPokemon2] = React.useState(null);
   const [move, setMove] = React.useState(null);
   return (
-
     <div className="App">
+      <Battle pokemon1={pokemon1} pokemon2={pokemon2} move={move} />
       <header className="App-header">
-      <section className="battle">
-      <LeftPlayer setPokemon={setPokemon1} setMove={setMove}/>
-      <RightPlayer setPokemon={setPokemon2} setMove={setMove}/>
-      </section>
-
-      <Battle pokemon1={pokemon1} pokemon2={pokemon2} move={move}/>
+        <section className="battle">
+          <LeftPlayer setPokemon={setPokemon1} setMove={setMove} />
+          <RightPlayer setPokemon={setPokemon2} setMove={setMove} />
+        </section>
       </header>
     </div>
-
   );
 }
 
