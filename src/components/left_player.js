@@ -15,13 +15,13 @@ const LeftPlayer = ({ pokemon, setPokemon, setMove, turn }) => {
  
         <h1>Mahmod</h1>
         <ul className="moves">
-          <li>1<button onClick={()=>{if(turn==1) setMove({power: 20})}}>Hello</button>
+          <li>1<button onClick={()=>{if(turn===1) setMove({power: 20})}}>Hello</button>
           </li>
-          <li>2 <button onClick={()=>{if(turn==1) setMove({power: 20})}}>Hello</button>
+          <li>2 <button onClick={()=>{if(turn===1) setMove({power: 20})}}>Hello</button>
           </li>
-          <li>3 <button onClick={()=>{if(turn==1) setMove({power: 20})}}>Hello</button>
+          <li>3 <button onClick={()=>{if(turn===1) setMove({power: 20})}}>Hello</button>
           </li>
-          <li>4 <button onClick={()=>{if(turn==1) setMove({power: 20})}}>Hello</button>
+          <li>4 <button onClick={()=>{if(turn===1) setMove({power: 20})}}>Hello</button>
           </li>
         </ul>
         <img className="pokeball" src="./pokeball.png"></img>
