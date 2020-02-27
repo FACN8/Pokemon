@@ -30,6 +30,7 @@ const RightPlayer = ({ pokemon, setPokemon, setMove, turn }) => {
         <img alt="pokemon" src={pokemon.sprites.front_default}></img>
         <h1 className="pokeName">{pokemon.name}</h1>
         <ul className="moves">
+
           <li>
             <img
               onClick={() => (turn === 2 ? setMove({ power: moves[0].power, accuracy: moves[0].accuracy }) : '')}
