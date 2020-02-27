@@ -27,15 +27,12 @@ function Battle({ p1Life, setP1Life, p2Life, setP2Life, move, turn, setTurn }) {
     <div className="stats">
     <img className="lifeHeart" src="./life.png"></img>
       <div className="lifeBar" id="lifeBar1">
-
-        <img alt="heart" className="lifeHeart" src="./life.png"></img>
-        <h3 id="firstPokemonLife">Pokemon - 1: {p1Life}%</h3>
+        <div id="firstPokemonLife">{p1Life}%</div>
       </div>
       	&nbsp;	&nbsp;	&nbsp;
       <div className="lifeBar" id="lifeBar2">
 
-        <h3 id="secondPokemonLife">Pokemon - 2: {p2Life}%</h3>
-        <img alt="heart" className="lifeHeart" src="./life.png"></img>
+        <div id="secondPokemonLife">{p2Life}%</div>
       </div>
       <img className="lifeHeart" src="./life.png"></img>
 
@@ -45,5 +42,4 @@ function Battle({ p1Life, setP1Life, p2Life, setP2Life, move, turn, setTurn }) {
 
 export default Battle;
 
-// var width = (currentquestion+1)/maxquestions * 100;
-// element.style.width = width + '%';
+
