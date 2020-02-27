@@ -143,3 +143,8 @@ span {
   transform: scaleX(-1);
 }
  
+
+.choosePokeImg {
+  height: 25vh;
+  width: 15vw;
+}

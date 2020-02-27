@@ -2,12 +2,11 @@ import React from 'react';
 import { getPokemon } from '../utils/getPokemon';
 import { getMove } from '../utils/getMove';
 
-const RightPlayer = ({ pokemon, setPokemon, setMove, turn }) => {
+const RightPlayer = ({ pokemon, setPokemon, setMove, turn, player }) => {
   const [moves, setMoves] = React.useState([]);
 
   React.useEffect(() => {
-    //change pikachu to pokemon.name
-    getPokemon('mew').then(res => setPokemon(res));
+    getPokemon(pokemon.name).then(res => setPokemon(res));
   }, []);
 
   React.useEffect(() => {}, [turn, pokemon]);
@@ -24,7 +23,7 @@ const RightPlayer = ({ pokemon, setPokemon, setMove, turn }) => {
 
   return (
     <section className="player">
-      <h1>1st Player </h1>
+      <h1>{player}</h1>
       <div id="rightPlayer">
 
         <img alt="pokemon" src={pokemon.sprites.front_default}></img>
@@ -69,7 +68,7 @@ const RightPlayer = ({ pokemon, setPokemon, setMove, turn }) => {
           </li>
         </ul>
       </div>
-      <img className="characterOne" src="https://assets.pokemon.com/assets/cms2/img/misc/countries/mt/country_detail_pokemon.png"></img>
+      <img className="characterOne" src={pokemon.sprites.front_default}></img>
 
     </section>
     

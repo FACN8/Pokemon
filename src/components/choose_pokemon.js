@@ -45,7 +45,7 @@ const ChoosePokemon = ({ setPlayer1, setPlayer2, pokemon1, setPokemon1, pokemon2
             <button name="start1" onClick={()=> { setPlayer1(n1); setPokemon1(p1);setPlayer2(n2); setPokemon2(p2)}}>Ready</button>
 </form>
         <div>
-            <img src={pokemon1.sprites.front_default} alt="of pokemon"/>
+            <img className="choosePokeImg" src={pokemon1.sprites.front_default} alt="of pokemon"/>
             <h1 align="center">{pokemon1.name} stats</h1>
             <h2 align="left">Pokedex Id: {pokemon1.id}</h2>
             <h2 align="left"><b>Name: </b>{pokemon1.name}</h2>
@@ -68,7 +68,7 @@ const ChoosePokemon = ({ setPlayer1, setPlayer2, pokemon1, setPokemon1, pokemon2
             ))}</select>
       </form>
       <div>
-            <img src={pokemon2.sprites.front_default} alt="of pokemon"/>
+            <img className="choosePokeImg" src={pokemon2.sprites.front_default} alt="of pokemon"/>
             <h1 align="center">{pokemon2.name} stats</h1>
             <h2 align="left"><b>Pokedex Id: </b>{pokemon2.id}</h2>
             <h2 align="left"><b>Name: </b>{pokemon2.name}</h2>

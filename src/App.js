@@ -21,17 +21,18 @@ function App() {
   
   
 
-   if(player1===null || player2===null) {
+   if(player1===null || player2===null || p1Life <= 0 || p2Life <=0) {
       return(<div><ChoosePokemon setPlayer1={setPlayer1} setPlayer2={setPlayer2} pokemon1={pokemon1} setPokemon1={setPokemon1} pokemon2={pokemon2} setPokemon2={setPokemon2}/></div>)
   }
+ 
   return (
     <div className="App">
       <header className="App-header">
         <Battle p1Life={p1Life} setP1Life={setP1Life} p2Life={p2Life} setP2Life={setP2Life} move={move} turn={turn} setTurn={setTurn} />
 
         <section className="battle">
-          <LeftPlayer pokemon={pokemon1} setPokemon={setPokemon1} setMove={setMove} turn={turn} />
-          <RightPlayer pokemon={pokemon2} setPokemon={setPokemon2} setMove={setMove} turn={turn} />
+          <LeftPlayer pokemon={pokemon1} setPokemon={setPokemon1} setMove={setMove} turn={turn} player={player1}/>
+          <RightPlayer pokemon={pokemon2} setPokemon={setPokemon2} setMove={setMove} turn={turn} player={player2}/>
         </section>
       </header>
     </div>

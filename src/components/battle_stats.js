@@ -6,10 +6,10 @@ function Battle({ p1Life, setP1Life, p2Life, setP2Life, move, turn, setTurn }) {
 
     if (turn === 1) {
       setTurn(2);
-      setP2Life(p2Life - move.power);
+      setP2Life(p2Life - (move.power/2));
     } else {
       setTurn(1);
-      setP1Life(p1Life - move.power);
+      setP1Life(p1Life - (move.power/2));
     }
 
     return;
