@@ -30,6 +30,9 @@ li {
 .lifeBar {
   display: flex;
   align-items: center;
+  width: 100%; 
+  background-color: rgb(230, 230, 230); 
+  border-radius: 10px;
 }
 
 .stats {
@@ -82,15 +85,13 @@ span {
 }
 /*-----------------------------------------------------*/
  #lifeBar1, #lifeBar2{ 
- /* #lifeBar1 #lifeBar2{ 
-   width: 50%; 
+  width: 50%; 
   background-color: rgb(230, 230, 230); 
   border-radius: 10px;
-} 
+}
   
 #firstPokemonLife, #secondPokemonLife { 
-  width: 0.00001%; 
-  height: 35px;
+  height: 100%;
   background: rgb(5,103,106);
   background: linear-gradient(90deg, rgba(5,103,106,1) 0%, rgba(9,121,121,1) 35%, rgba(0,255,109,1) 100%);   
   line-height: 32px; 
@@ -116,6 +117,4 @@ span {
   -o-transform: scaleX(-1);
   transform: scaleX(-1);
 }
-=======
-}  */
  
