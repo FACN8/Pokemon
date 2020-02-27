@@ -81,14 +81,13 @@ span {
   text-transform: uppercase;
 }
 /*-----------------------------------------------------*/
- #lifeBar1, #lifeBar2{ 
- /* #lifeBar1 #lifeBar2{ 
-   width: 50%; 
+/* #lifeBar1 #lifeBar2{ 
+  width: 50%; 
   background-color: rgb(230, 230, 230); 
   border-radius: 10px;
 } 
   
-#firstPokemonLife, #secondPokemonLife { 
+#firstPokemonLife #secondPokemonLife { 
   width: 0.00001%; 
   height: 35px;
   background: rgb(5,103,106);
@@ -97,25 +96,4 @@ span {
   color: black;
   border-radius: 10px;
   border: solid rgb(0, 85, 0) 1px;
- } 
-
-.characterOne, .characterTwo{
-  position: fixed;
-  width: 10vw;
-  height: 15vh;
-  border-radius: 50%;
-  right: 18vw;
-  top: 52vh;
-}
-
-.characterTwo{
-  right: 0;
-  left: 18vw;
-  -moz-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  transform: scaleX(-1);
-}
-=======
 }  */
- 

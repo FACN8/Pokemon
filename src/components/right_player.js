@@ -26,7 +26,6 @@ const RightPlayer = ({ pokemon, setPokemon, setMove, turn }) => {
     <section className="player">
       <h1>1st Player </h1>
       <div id="rightPlayer">
-
         <img alt="pokemon" src={pokemon.sprites.front_default}></img>
         <h1 className="pokeName">{pokemon.name}</h1>
         <ul className="moves">
@@ -68,10 +67,7 @@ const RightPlayer = ({ pokemon, setPokemon, setMove, turn }) => {
           </li>
         </ul>
       </div>
-      <img className="characterOne" src="https://assets.pokemon.com/assets/cms2/img/misc/countries/mt/country_detail_pokemon.png"></img>
-
     </section>
-    
   );
 };
 
